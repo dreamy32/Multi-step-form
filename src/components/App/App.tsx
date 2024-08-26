@@ -34,6 +34,7 @@ function App() {
     errors,
     firstStepFormData,
     billingPlan,
+    vehicleType,
     regularityObj,
     handleMultipleInputs,
     handleSetBillingPlan,
@@ -61,6 +62,7 @@ function App() {
             errors={errors}
             firstStepFormData={firstStepFormData}
             billingPlan={billingPlan}
+            vehicleType={vehicleType}
             regularityObj={regularityObj}
             handleMultipleInputs={handleMultipleInputs}
             handleSetBillingPlan={handleSetBillingPlan}

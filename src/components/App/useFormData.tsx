@@ -44,7 +44,13 @@ export function useFormData() {
       ...currentAddOns,
       [option]: !currentOptionValue,
     }));
+    
   };
+  // Car Selection
+  const [vehicleType, setVehicleType] = useState("");
+  const handleSetVehicleType = useCallback((value: string): void => {
+    setVehicleType(value);
+  }, []);
 
   return {
     register,
@@ -52,9 +58,11 @@ export function useFormData() {
     errors,
     firstStepFormData,
     billingPlan,
+    vehicleType,
     regularityObj,
     handleMultipleInputs,
     handleSetBillingPlan,
+    handleSetVehicleType,
     handleRegularity,
     regularity,
     handleAddOns,

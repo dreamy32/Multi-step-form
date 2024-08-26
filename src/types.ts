@@ -33,6 +33,17 @@ export interface BaseRadioProps {
   billingPlanDescription?: boolean;
   handleRadioClick: (a: number) => void;
 }
+export interface BaseRadioImageProps {
+  // img: HTMLImageElement,
+  // legend: string;
+  name: string;
+  radios: any[];
+  // regularityObj?: RegularityObj;
+  checked: string;
+  customStyle?: "toggle";
+  // billingPlanDescription?: boolean;
+  handleRadioClick: (a: number) => void;
+}
 
 export interface BillingPlanDescriptionProps {
   numberValue?: number;
@@ -86,6 +97,7 @@ export interface UniqueStepsProps {
   errors: FieldErrors<FieldValues>;
   firstStepFormData: string[];
   billingPlan: number;
+  vehicleType: string;
   regularityObj: RegularityObj;
   handleMultipleInputs: (value: string, index: number) => void;
   handleSetBillingPlan: (value: number) => void;

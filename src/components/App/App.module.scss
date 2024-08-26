@@ -9,7 +9,7 @@
 
   @include min-width(medium) {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr; // Changed from columns to rows
     place-self: center;
     padding: var(--spacer-16);
     width: min(rem(940), 90%);
@@ -17,8 +17,9 @@
     background-color: var(--color-white);
     border-radius: var(--spacer-16);
   }
+
   @include min-width(large) {
-    grid-template-columns: 3fr 7fr;
+    grid-template-rows: 1fr 7fr; // Changed from columns to rows
   }
 
   --indicator-bottom-overlap: #{rem(68)};
@@ -26,7 +27,7 @@
 
 .stepsWrapper {
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr; // Changed from rows to columns
   padding-bottom: rem(80);
 
   @include min-width(medium) {
@@ -35,7 +36,7 @@
 }
 
 .controllersMobileWrapper {
-  position: absolute; // [overlapping elements]-> negatative margin affects it
+  position: absolute; // [overlapping elements]-> negative margin affects it
   right: 0;
   bottom: 0;
   left: 0;

@@ -71,7 +71,7 @@ function IndicatorWrapper({ state, children }: PropsWithChildren<IndicatorWrappe
 function IndicatorVisual({ value }: IndicatorVisualProps) {
   return (
     <span className={css.numberBox} role="presentation">
-      <span className={css.number}>{value}</span>
+      {/* <span className={css.number}>{value}</span> */}
     </span>
   );
 }
@@ -80,8 +80,8 @@ function IndicatorLabel({ step, label, hiddenLabel }: IndicatorLabelProps) {
   return (
     <>
       {hiddenLabel && <span className="visuallyhidden">{hiddenLabel}</span>}
-      <span className={css.stepBox}>Step {step}</span>
-      <span className={css.label}>{label}</span>
+      {/* <span className={css.stepBox}>Step {step}</span> */}
+      {/* <span className={css.label}>{label}</span> */}
     </>
   );
 }

@@ -1,11 +1,15 @@
 export const steps = [
-  { index: 1, label: "Your Info" },
+  { index: 1, label: "Choisi un type de véhicule" },
   { index: 2, label: "Select Plan" },
   { index: 3, label: "Add Ons" },
   { index: 4, label: "Summary" },
 ];
 
 export const stepControllersProps = {
+  0: {
+    buttonLabel: "Next sddddtep",
+    // allowGoStepBack: true,
+  },
   1: {
     buttonLabel: "Next step",
   },
@@ -24,6 +28,7 @@ export const stepControllersProps = {
   5: {
     navigationButtons: false,
   },
+  
 };
 
 export const firstStepForm = [
@@ -156,7 +161,24 @@ export const billingPlanRadios = {
     },
   ],
 };
-
+export const vehicleRadios = {
+  name: "vehicle",
+  legend: "Choisi un type de véhicule pour commencer",
+  radios: [
+    { 
+      id:"auto",
+      value: "auto",
+      label: "Auto",
+      img: "https://cdn.discordapp.com/attachments/1276598450892312739/1277719493640196096/image_3.png"
+    },
+    { 
+      id:"vus",
+      value: "vus",
+      label: "VUS",
+      img: "https://cdn.discordapp.com/attachments/1276598450892312739/1277719493640196096/image_3.png"
+    },
+  ]
+}
 export const radioToggle = {
   name: "period",
   legend: "How would you like to be charged?",

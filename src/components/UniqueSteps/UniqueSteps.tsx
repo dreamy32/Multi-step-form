@@ -4,6 +4,7 @@ import {
   billingPlanRadios,
   radioToggle,
   addOnsCheckboxes,
+  vehicleRadios
   //@ts-ignore
 } from "../../data.js";
 
@@ -14,12 +15,14 @@ import BaseCheckboxGroup from "../BaseCheckboxGroup/BaseCheckboxGroup";
 import OrderSummary from "../OrderSummary/OrderSummary";
 
 import { UniqueStepsProps, BaseInputProps } from "../../types"
+import BaseRadioImage from "../BaseRadioImage/BaseRadioImage";
 
 function UniqueSteps({
   register,
   errors,
   firstStepFormData,
   billingPlan,
+  vehicleType,
   regularityObj,
   handleMultipleInputs,
   handleSetBillingPlan,
@@ -33,6 +36,22 @@ function UniqueSteps({
   return (
     <>
       {currentStep === 1 && (
+        <StepWrapper
+          heading="Select youyr plan"
+          description="You have the option of monthly or yearly billing."
+          stepControllersProps={stepControllersProps[0]}
+          isMobile={isMobile}
+        >
+          <BaseRadioImage
+            name={vehicleRadios.name}
+            radios={vehicleRadios.radios}
+            checked={vehicleType}
+            handleRadioClick={() => console.log("d")}
+          />
+        </StepWrapper>
+
+      )}
+      {/* {currentStep === 1 && (
         <StepWrapper
           heading="Personal info"
           description="Please provide your name, email address, and phone number."
@@ -55,7 +74,7 @@ function UniqueSteps({
             />
           ))}
         </StepWrapper>
-      )}
+      )} */}
       {currentStep === 2 && (
         <StepWrapper
           heading="Select your plan"
@@ -127,6 +146,7 @@ function UniqueSteps({
           isMobile={isMobile}
         ></StepWrapper>
       )}
+
     </>
   );
 }
