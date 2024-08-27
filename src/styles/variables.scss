@@ -1,4 +1,5 @@
 @import "functions.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); //import Poppins Font
 
 // Brekpoints
 $breakpoint-xsmall: 320px;
@@ -9,7 +10,7 @@ $breakpoint-extra-large: 1300px;
 
 // Colors
 html {
-  --font: "Ubuntu", sans-serif;
+  --font: "Poppins", sans-serif;
 
   --color-accent-light: #bee2fd;
   --color-accent-one: #483eff;
@@ -32,3 +33,7 @@ html {
   --spacer-16: #{rem(16)};
   --spacer-48: #{rem(48)};
 }
+
+//Auto-Canada colors
+$color-acan-selected: #f4495a;
+$color-acan-nonselected: #e4e4e4;

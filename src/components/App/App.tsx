@@ -6,6 +6,8 @@ import "../../styles/utilities.scss";
 import "../../styles/global.scss";
 import css from "./App.module.scss";
 
+//Medias (Images, audio, etc.)
+import acan_logo from "../../images/acan_logo.svg";
 //@ts-ignore
 import { stepControllersProps } from "../../data";
 
@@ -49,6 +51,16 @@ function App() {
 
   return (
     <StepChangeContext.Provider value={handleStepChange}>
+      <header className={css.header}>
+        <div id="logo" className={css.headerContainer}>
+          <img src={acan_logo} alt="Logo" className={css.headerImage} />
+        </div>
+        <div id="landing-text" className={css.titles}>
+          <h1>Obtenez le meilleur taux pour votre prêt auto</h1>
+          <h3 className={css.subtitle}>Aucune obligation, soumission gratuite</h3>
+        </div>
+
+      </header>
       <main className={css.app}>
         <Indicator currentStep={currentStep} />
         <WrapperTag

@@ -10,13 +10,13 @@ function BaseRadioImage({
     handleRadioClick,
 }: BaseRadioImageProps) {
     const radioStyle = customStyle === "toggle" ? "toggle" : "radio";
-
+//faire des clés de type string, changer map. jai vu hashmap sur internet
     return (
         <div className={css[`${radioStyle + "Group"}`]}>
             <fieldset className={css[`${radioStyle + "Fieldset"}`]}>
                 {/* <legend className={css[`${radioStyle + "Legend"}`]}>{legend}</legend> */}
-                {radios.map((radio, i) => {
-                    const value = i;
+                {radios.map((radio) => {
+                    const value = radio.id;
                     return (
                         <React.Fragment key={radio.id}>
                             <input

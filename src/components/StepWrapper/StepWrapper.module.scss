@@ -9,7 +9,6 @@
   padding: rem(32) rem(24);
   background-color: var(--color-white);
   border-radius: rem(8);
-
   @include min-width(medium) {
     margin: rem(40) 10% rem(16);
     padding: 0;

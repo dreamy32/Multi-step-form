@@ -2,6 +2,34 @@
 @import "../../styles/functions.scss";
 @import "../../styles/mixins.scss";
 
+//#region Header
+.header {
+  // margin-inline: auto;
+  width: 100%;
+  padding: 0;
+}
+.headerContainer {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.09);
+  padding-bottom: 5px;
+}
+.headerImage {
+  width: 530px;
+  margin: auto;
+}
+//Titles h#
+.titles{
+  // font-family: ;
+  margin-top: 45px;
+  text-align: center;
+  line-height: 1.2;  
+}
+.subtitle{
+  margin-top: 10px;
+  font-weight: 250;
+}
+//#endregion 
+
+//Main
 .app {
   position: relative;
   height: auto;
@@ -19,7 +47,7 @@
   }
 
   @include min-width(large) {
-    grid-template-rows: 1fr 7fr; // Changed from columns to rows
+    grid-template-rows: 0.5fr 7fr; // Changed from columns to rows
   }
 
   --indicator-bottom-overlap: #{rem(68)};

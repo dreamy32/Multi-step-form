@@ -1,6 +1,10 @@
 @import "mixins.scss";
 @import "variables.scss";
 
+//Variables
+$background-color: red;
+
+//Styling
 a,
 input,
 textarea,
@@ -26,8 +30,10 @@ a {
 }
 
 html {
-  height: 100%;
-  background-color: var(--color-bg-light);
+  // height: 100%;
+  // background-color: var(--color-bg-light);
+  font-family: 'Poppins', sans-serif;
+  ;
 }
 
 body {
@@ -36,4 +42,9 @@ body {
 
 #root {
   display: grid;
+}
+@for $i from 1 through 6 {
+  h#{7 - $i} {
+      font-size: $i * .32rem;
+  }
 }
